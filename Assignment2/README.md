@@ -52,7 +52,7 @@
 
 ## **Dictionary exercises:**
 - Question: How does python determine the length of a dictionary?
-  - Answer: The length of about_me dictionary is 4. Python counts the number of variables stored in the dictionary.
+  - Answer: The length of about_me dictionary is 4. Python determines the length of a dictionary by counting the number of variables stored in the dictionary.
 
 ## **Array exercises:**
 - Question 1: Create an array called "mixnums" composed of 3 integers and 3 floats. Print the array. What has happened to the array?
