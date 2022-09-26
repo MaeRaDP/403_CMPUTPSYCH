@@ -56,6 +56,6 @@
 
 ## **Array exercises:**
 - Question 1: Create an array called "mixnums" composed of 3 integers and 3 floats. Print the array. What has happened to the array?
-  - Answer:
+  - Answer: Python output of the mixnums array shows all the integers converted into floats.
 - Question 2: Create an array called "mixtypes" composed of 2 integers, 2 floats, and 2 strings. Print the array. What has happened to the array? What does python do to arrays with mixed types?
-  - Answer:
+  - Answer: Python output of mixtypes array shows all the integers and floats converted into strings.
