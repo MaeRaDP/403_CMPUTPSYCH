@@ -21,11 +21,11 @@
 - Question 1: Do any variables show up in the Variable Editor?
   - Answer: Yes - letter1, letter2, and letter3 all show up in the Variable Explorer as strings (type) along with their given values.
 - Question 2: Does Python have a problem with two different variables having the same value?
-  - Answer: No - Python does not have a problem with two different variables with the same value.
+  - Answer: No - Python does not have a problem with two different variables with the same value. (E.g., letter1 and letterX having the value of 'M')
 - Question 3: Did changing the value of letterX change the value of the other variable(s)?
-  - Answer:
+  - Answer: No - changing letterX's value doesn't change letter1's value.
 - Question 4: Did changing the value of letter1 change the value of letterX? What does this tell you about python variable assignment?
-  - Answer:
+  - Answer: Yes - changing the value of letter1 changed the value of letterX when letterX=letter1. When you create a variable, Python assigns the value of that variable with what is given to the right of the equal sign.
 
 ## **Boolean exercises:**
 - Question 1: Are 1 and 1.0 equivalent? Are "1" and "1.0" equivalent? Why do you think this is?
