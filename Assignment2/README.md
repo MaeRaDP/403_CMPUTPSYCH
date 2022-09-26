@@ -29,16 +29,16 @@
 
 ## **Boolean exercises:**
 - Question 1: Are 1 and 1.0 equivalent? Are "1" and "1.0" equivalent? Why do you think this is?
-  - Answer: 
+  - Answer: Yes - 1 and 1.0 are equavalent to each other because they are the same number. Python output True given 1 == 1.0.
 - Question 2:
-  - Answer: 
+  - Answer: Yes - 5 and (3+2) are equivalent because they mean the same thing mathematically.
 - Question 3: List 5 ways to get True as your output for the given statements:
   - Answer:
-  - 1. 
-  - 2.
-  - 3.
-  - 4.
-  - 5.
+  - 1. (1 == 1.0 and not '1' == '1.0' and 5 == (3+2))
+  - 2. (1 == 1.0 and not '1' == '1.0' or 5 == (3+2))
+  - 3. (1 == 1.0 and '1' == '1.0' or 5 == (3+2))
+  - 4. (1 == 1.0 or'1' == '1.0' or 5 == (3+2))
+  - 5. (1 == 1.0 or '1' == '1.0' and 5 == (3+2))
 
 ## **List exercises:**
 - Question 1: Create a list called "oddlist", listing all of the odd integers between 0 and 10. Did oddlist become a variable?
