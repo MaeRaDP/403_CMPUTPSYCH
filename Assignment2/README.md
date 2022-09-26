@@ -7,13 +7,13 @@
 
 ## **Operation exercises:**
 
-- Question 1: Divide 5/2 (integer format) and 5.0/2.0 (float format). Does python output the same values for these?
+- Question 1: Divide 5/2 (integer format) and 5.0/2.0 (float format). Does python output the same values for these? If you got a different answer for the two operations, explain why.
   - Answer:
-- Question 2:
+- Question 2: What does the modulo operator (%) do?
   - Answer:
-- Question 3:
+- Question 3: What do these operators do: ** and //?
   - Answer:
-- Question 4:
+- Question 4: Does python follow order of operations?
   - Answer:
 
 ## **Variable exercises:**
