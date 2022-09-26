@@ -2,19 +2,20 @@
 
 ## **Print exercises:**
 - Question: Do any variables show up in the Variable Editor (for yourname.py)?
-  - Answer: No variables show up in Spyder's Variable Explorer when I run the script that prints my first name, one letter at a time.
+  - Answer: No - no variables show up in Spyder's Variable Explorer when I run the script that prints my first name, one letter at a time.
 
 
 ## **Operation exercises:**
-
-- Question 1: Divide 5/2 (integer format) and 5.0/2.0 (float format). Does python output the same values for these? If you got a different answer for the two operations, explain why.
-  - Answer:
+- Question 1: Divide 5/2 (integer format) and 5.0/2.0 (float format). Does Python output the same values for these? If you got a different answer for the two operations, explain why.
+  - Answer: Yes - Python output the same values when you do these operations 5/2 and 5.0/2.0.
 - Question 2: What does the modulo operator (%) do?
-  - Answer:
+  - Answer: The modulo operator output the remainder when dividing two integers. (E.g., it output 2 for 90 % 4)
 - Question 3: What do these operators do: ** and //?
-  - Answer:
-- Question 4: Does python follow order of operations?
-  - Answer:
+  - Answer: 
+  - ** operator - it raises number on the left of ** to the power of the number on the left of **. (E.g., 10 ** 3 output 1000)
+  - // operator - divides the number on the left of // with the number on the right and output the smallest integer. (E.g., 15 // 6 output 2)
+- Question 4: Does Python follow order of operations?
+  - Answer: Yes - Python follows order of operations. (E.g., 1 + 6 + 8 * 9 / 3 output 31.0)
 
 ## **Variable exercises:**
 - Question 1: Do any variables show up in the Variable Editor?
