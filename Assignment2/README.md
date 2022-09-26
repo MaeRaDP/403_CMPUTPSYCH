@@ -1,4 +1,4 @@
-# This is my set of answers to Assignment 2:
+# My answers to Assignment 2 exercise questions:
 
 ## **Print exercises:**
 - Question: Do any variables show up in the Variable Editor (for yourname.py)?
