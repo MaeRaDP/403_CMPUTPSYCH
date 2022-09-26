@@ -25,8 +25,8 @@
 - Question 3: Did changing the value of letterX change the value of the other variable(s)?
   - Answer: No - changing letterX's value doesn't change letter1's value.
 - Question 4: Did changing the value of letter1 change the value of letterX? What does this tell you about python variable assignment?
-  - Answer: Yes - changing the value of letter1 changed the value of letterX, when letterX=letter1. When you create a variable, Python assigns the value of that variable with what is given to the right of the equal sign.
-
+  - Answer: Yes - changing the value of letter1 changed the value of letterX, when letterX=letter1. When you create a variable, Python assigns the value of that variable with what is given to the right of the equal sign. We can reassign different values to variables without impacting/changing existing variables.
+  
 ## **Boolean exercises:**
 - Question 1: Are 1 and 1.0 equivalent? Are "1" and "1.0" equivalent? Why do you think this is?
   - Answer: Yes - 1 and 1.0 are equavalent to each other because they are the same number. Python output True given 1 == 1.0.
