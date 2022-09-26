@@ -42,13 +42,13 @@
 
 ## **List exercises:**
 - Question 1: Create a list called "oddlist", listing all of the odd integers between 0 and 10. Did oddlist become a variable?
-  - Answer:
+  - Answer: Yes - oddlist became a variable
 - Question 2: When you use the "len" function on oddlist, how long does python say the list is?
-  - Answer:
+  - Answer: Python says the length of the list is 5.
 - Question 3: When you use the "type" function on oddlist, what type of variable does python say oddlist is?
-  - Answer:
+  - Answer: Python says the variable oddlist is a type of list
 - Question 4: Print intlist. Does it list all integers between 0 and 100?
-  - Answer:
+  - Answer: Yes - intlist prints all integers between 0 and 100.
 
 ## **Dictionary exercises:**
 - Question: How does python determine the length of a dictionary?
