@@ -25,7 +25,7 @@
 - Question 3: Did changing the value of letterX change the value of the other variable(s)?
   - Answer: No - changing letterX's value doesn't change letter1's value.
 - Question 4: Did changing the value of letter1 change the value of letterX? What does this tell you about python variable assignment?
-  - Answer: Yes - changing the value of letter1 changed the value of letterX when letterX=letter1. When you create a variable, Python assigns the value of that variable with what is given to the right of the equal sign.
+  - Answer: Yes - changing the value of letter1 changed the value of letterX, when letterX=letter1. When you create a variable, Python assigns the value of that variable with what is given to the right of the equal sign.
 
 ## **Boolean exercises:**
 - Question 1: Are 1 and 1.0 equivalent? Are "1" and "1.0" equivalent? Why do you think this is?
@@ -52,7 +52,7 @@
 
 ## **Dictionary exercises:**
 - Question: How does python determine the length of a dictionary?
-  - Answer:
+  - Answer: The length of about_me dictionary is 4. Python counts the number of variables stored in the dictionary.
 
 ## **Array exercises:**
 - Question 1: Create an array called "mixnums" composed of 3 integers and 3 floats. Print the array. What has happened to the array?
