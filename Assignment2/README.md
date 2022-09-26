@@ -1,4 +1,4 @@
-# My answers to Assignment 2 exercise questions:
+# PSYCH 403 - Assignment 2 exercises: MPacificar
 
 ## **Print exercises:**
 ```
@@ -15,7 +15,7 @@ print('E')
 print(5 / 2) 
 print(5.0 / 2.0) 
 ```
-- Question 1: Does Python output the same values for these? If you got a different answer for the two operations, explain why.
+- Question 1: Does Python output the same values for these? If you got a different answer for the twCancel changeso operations, explain why.
   - Answer: Yes - Python output the same values when you do these operations.
 ```
 print(90 % 4) 
@@ -189,13 +189,14 @@ print(mixtypes)
 ```
 - Question 2: Create an array called "mixtypes" composed of 2 integers, 2 floats, and 2 strings. Print the array. What has happened to the array? What does python do to arrays with mixed types?
   - Answer: Python output of mixtypes array shows all the integers and floats converted into strings.
+
+Create an array called "oddarray" of all odd numbers between 0 and 100. Then print.
 ```
-# Create an array called "oddarray" of all odd numbers between 0 and 100. Then print.
 oddarray = np.arange(1,100,2)
 print(oddarray)
 ```
+Create an array called "logarray" of 16 numbers between 1 and 5 that follow a logarithmic distribution. Then print.
 ```
-# Create an array called "logarray" of 16 numbers between 1 and 5 that follow a logarithmic distribution. Then print.
 logarray = np.logspace(1,5,16)
 print(logarray)
 ```
