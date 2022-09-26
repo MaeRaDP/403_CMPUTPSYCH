@@ -168,7 +168,7 @@ print(type(about_me))
 print(len(about_me))
 ```
 - Question: How does python determine the length of a dictionary?
-  - Answer: The length of about_me dictionary is 4. Python determines the length of a dictionary by counting the number of objects (e.g., the variables) stored in the dictionary.
+  - Answer: The length of about_me dictionary is 4. Python determines the length of a dictionary by counting the number of objects (e.g., the variables separated by comma ,) stored in the dictionary.
 
 ## **Array exercises:**
 ```
