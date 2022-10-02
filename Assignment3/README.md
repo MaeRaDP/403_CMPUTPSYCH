@@ -44,6 +44,8 @@ numarr * 2
 ```
 Question: What is the difference between multiplying lists and multiplying arrays?
 - **Answer:**
+When you multiply lists
+When you multiply arrays
 
 Create a list of strings ['do','re','mi','fa'] called "strlist". Use operations to create the following outputs with your variable:
 ['dodo','rere','mimi','fafa']
