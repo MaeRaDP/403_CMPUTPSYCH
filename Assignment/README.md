@@ -43,7 +43,7 @@ my_name = 'MAE'
 counter = -1
 
 for each_letter in my_name:
-    counter = counter+1
+    counter = counter + 1
     print(each_letter)
     print("This letter has an index of %i" %counter)
 ```
@@ -64,7 +64,7 @@ for names in name_list:
     print(names)
     counter = -1
     for each_letter in names:
-        counter = counter+1
+        counter = counter + 1 
         print(each_letter)
         print("This letter has an index of %i" %counter)
 ```
@@ -72,10 +72,37 @@ for names in name_list:
 ## While loop exercises
 1. Create a while loop of 20 iterations that prints "image1.png" for the first 10 iterations, and "image2.png" for the next 10 iterations.
 ```
+iteration = 0
+
+while iteration < 20:
+    if iteration <10:    
+        print('image1.png')
+    elif iteration <20:
+        print('image2.png')
+    iteration = iteration + 1
 ```
 2. Create a while loop that shows an image until the participant makes a response of 1 or 2. Run it a few times to make sure it works the way you expect.
 ```
+response = False
+iteration = 0
+
+while not response:
+    iteration = iteration + 1
+    print('image.png')
+    
+    if response == 1 or response == 2:
+        response = True
 ```
 3. Create a failsafe that terminates the previous while loop after 5 iterations if one of the valid responses (1,2) have not been made in that time.
 ```
+response = False
+iteration = 0
+failsafe = 0
+
+while not response:
+    iteration = iteration + 1
+    print('image.png')
+    failsafe = failsafe + 1
+    if response == 1 or response == 2 or failsafe == 5:
+        response = True
 ```
