@@ -1,4 +1,4 @@
-# My answers to Assignment 3 exercise questions:
+# PSYCH 403 - Assignment 3 exercises: MPacificar
 
 ## **Variable operations exercises:**
 Create three variables: "sub_code", "subnr_int", and "subnr_str". The sub_code should be "sub". Assign the integer 2 to subnr_int, and assign the string "2" to subnr_str. 
