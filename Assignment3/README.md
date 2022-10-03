@@ -82,7 +82,40 @@ print([[strlist[0]*2],
 ## **Zipping exercises:**
 Create a script that outputs a counterbalanced list with every face paired with every house, repeated with each possible post-cue. Then, randomize the order of the list.
 ```
+import numpy as np
 
+# VARIABLES
+# 1. faces / houses present 1st
+face_1st = ['face1.png']*5 + ['face2.png']*5 + ['face3.png']*5 + ['face4.png']*5 + ['face5.png']*5
+house_1st = ['house1.png']*5 + ['house2.png']*5 + ['house3.png']*5 + ['house4.png']*5 + ['house5.png']*5
+
+# 2. faces / houses present 2nd
+face_2nd = ['face1.png','face2.png','face3.png','face4.png','face5.png']*5
+house_2nd = ['house1.png','house2.png','house3.png','house4.png','house5.png']*5
+
+# 3. post-cues
+postcues = ['cue1']*25 + ['cue2']*25
+
+imgs_half1 = list(zip(face_1st, house_2nd))*2
+print(imgs_half1)
+print(len(imgs_half1))
+
+TrialHalf1 = list(zip(imgs_half1, postcues))
+print(TrialHalf1)
+
+imgs_half2 = list(zip(house_1st, face_2nd))*2
+print(imgs_half2)
+print(len(imgs_half2))
+
+TrialHalf2 = list(zip(imgs_half2, postcues))
+print(TrialHalf2)
+
+Alltrials = TrialHalf1 + TrialHalf2
+print(Alltrials)
+
+np.random.shuffle(Alltrials)
+print(Alltrials)
+print(len((Alltrials)))
 ```
 
 ## **Indexing exercises:**
