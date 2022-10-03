@@ -1,6 +1,6 @@
 # PSYCH 403 - Assignment 3 exercises: MPacificar
 
-## **Variable operations exercises:**
+## Variable operations exercises:
 Create three variables: "sub_code", "subnr_int", and "subnr_str". The sub_code should be "sub". Assign the integer 2 to subnr_int, and assign the string "2" to subnr_str. 
 ```
 sub_code = "sub"
@@ -38,7 +38,7 @@ print((sub_code)*3 + (subnr_str)*3)
 
 ```
 
-## **List operations exercises:**
+## List operations exercises:
 Create a list of numbers [1,2,3] called "numlist". Multiply the list by 2.
 ```
 numlist = [1,2,3]
@@ -90,7 +90,7 @@ print([[strlist[0]*2],
       [strlist[3]*2]])
 ```
 
-## **Zipping exercises:**
+## Zipping exercises:
 Create a script that outputs a counterbalanced list with every face paired with every house, repeated with each possible post-cue. Then, randomize the order of the list.
 ```
 import numpy as np
@@ -128,7 +128,7 @@ np.random.shuffle(Alltrials)
 print(Alltrials)
 ```
 
-## **Indexing exercises:**
+## Indexing exercises:
 Create a list of strings called "colors", containing the following colors in this order: red, orange, yellow, green, blue, purple
 ```
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
@@ -149,7 +149,7 @@ colors.append('violet')
 print(colors)
 ```
 
-## **Slicing exercises:**
+## Slicing exercises:
 Create a list of numbers 0-100 called "list100".
 ```
 list100 = list(range(0,101))
