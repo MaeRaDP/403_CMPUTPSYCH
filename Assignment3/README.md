@@ -96,26 +96,25 @@ house_2nd = ['house1.png','house2.png','house3.png','house4.png','house5.png']*5
 # 3. post-cues
 postcues = ['cue1']*25 + ['cue2']*25
 
-imgs_half1 = list(zip(face_1st, house_2nd))*2
-print(imgs_half1)
-print(len(imgs_half1))
+# TRIALS
+# Face presented first, house second
+imgs_order1 = list(zip(face_1st, house_2nd))*2
 
-TrialHalf1 = list(zip(imgs_half1, postcues))
-print(TrialHalf1)
+# Half of all the possible trials, face presented first
+TrialHalf1 = list(zip(imgs_order1, postcues))
 
-imgs_half2 = list(zip(house_1st, face_2nd))*2
-print(imgs_half2)
-print(len(imgs_half2))
+# House presented first, face second
+imgs_order2 = list(zip(house_1st, face_2nd))*2
 
-TrialHalf2 = list(zip(imgs_half2, postcues))
-print(TrialHalf2)
+# Half of all the possible trials, house presented first
+TrialHalf2 = list(zip(imgs_order2, postcues))
 
+# All trials combined
 Alltrials = TrialHalf1 + TrialHalf2
-print(Alltrials)
 
+# Randomize list of trials
 np.random.shuffle(Alltrials)
 print(Alltrials)
-print(len((Alltrials)))
 ```
 
 ## **Indexing exercises:**
