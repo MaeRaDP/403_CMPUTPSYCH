@@ -58,19 +58,19 @@ Create a list of strings ['do','re','mi','fa'] called "strlist". Use operations 
 strlist = ['do', 're', 'mi', 'fa']
 
 # ['dodo','rere','mimi','fafa']
-print([strlist[0] + strlist[0], 
-       strlist[1] + strlist[1], 
-       strlist[2] + strlist[2], 
-       strlist[3] + strlist[3]])
+print([strlist[0]*2] +
+      [strlist[1]*2] +
+      [strlist[2]*2] +
+      [strlist[3]*2])
 
 # ['do','re','mi','fa','do','re','mi','fa']
 print(strlist*2)
 
 # ['do','do','re','re','mi','mi','fa','fa']
-print([strlist[0], strlist[0], 
-       strlist[1], strlist[1], 
-       strlist[2], strlist[2], 
-       strlist[3], strlist[3]])
+print([strlist[0]] + [strlist[0]] + 
+      [strlist[1]] + [strlist[1]] + 
+      [strlist[2]] + [strlist[2]] + 
+      [strlist[3]] + [strlist[3]])
 
 # [['do','do'],['re','re'],['mi','mi'],['fa','fa']]
 print([[strlist[0]*2],
