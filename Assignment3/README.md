@@ -88,19 +88,22 @@ Create a script that outputs a counterbalanced list with every face paired with 
 ## **Indexing exercises:**
 Create a list of strings called "colors", containing the following colors in this order: red, orange, yellow, green, blue, purple
 ```
-
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
 ```
 Using indexing, print the penultimate color.
 ```
-
+print(colors[-2])
 ```
 Using indexing, print the 3rd and 4th characters of the penultimate color.
 ```
-
+print(colors[-2][2] + colors[-2][3])
 ```
 Using indexing, remove the color "purple" and add "indigo" and "violet" to the list instead.
 ```
-
+colors.remove(colors[5])
+colors.append('indigo')
+colors.append('violet')
+print(colors)
 ```
 
 ## **Slicing exercises:**
