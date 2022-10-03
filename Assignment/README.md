@@ -32,9 +32,20 @@ else: print("subject pressed the wrong key")
 Remember the exercise where you printed each letter of your name? 
 1. Create a for loop that prints each letter without writing out all of the print statements manually.
 ```
+first_name = ['M','A','E']
+
+for each_letter in first_name:
+    print(each_letter)
 ```
 2. Add an index counter and modify your loop to print the index number after each letter
 ```
+first_name = ['M','A','E']
+count = -1
+
+for each_letter in first_name:
+    count = count+1
+    print(each_letter)
+    print("This letter has an index of " + str(count))
 ```
 3. Create a list of names "Amy","Rory", and "River". Create a nested for loop to loop through each letter of each name.
 ```
