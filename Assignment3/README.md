@@ -109,22 +109,22 @@ print(colors)
 ## **Slicing exercises:**
 Create a list of numbers 0-100 called "list100".
 ```
-
+list100 = list(range(0,101))
 ```
 Using slicing, print the first 10 numbers in the list.
 ```
-
+print(list100[:10])
 ```
 Using slicing, print all the odd numbers in the list backwards.
 ```
-
+print(list100[99::-2])
 ```
 Using slicing, print the last four numbers in the list backwards.
 ```
-
+print(list100[100:96:-1])
 ```
 Question: Are the 40th-44th numbers in the list equal to integers 39-43? Show the Boolean operation you would use to determine the truth value.
-- **Answer:**
 ```
-
+print(list100[39:44] == list(range(39,44)))
 ```
+- **Answer:** Yes, the 40th-44th numbers in the list is equal to integers 39-43. 
