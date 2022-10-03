@@ -3,13 +3,30 @@
 ## Conditional exercises
 1. You want to tell your experiment to record participant responses. If the response is "1" or "2", print OK. If the response is "NaN" (empty), print a "subject did not respond" message. If the response is anything else, print "subject pressed the wrong key".
 ```
+response = '1'
+
+if response == '1' or response == '2':
+    print("OK")
+elif response == 'NaN':
+    print("subject did not respond")
+else: print("subject pressed the wrong key")
 ```
 2. Create a nested "if" statement in the above exercise. If the response is "1", print "Correct!". If the response is "2", print "Incorrect!"
 ```
+response = '1'
+
+if response == '1' or response == '2':
+    print("OK")
+    if response == '1':
+        print("Correct!")
+    if response == '2':
+        print("Incorrect!")
+elif response == 'NaN':
+    print("subject did not respond")
+else: print("subject pressed the wrong key")
 ```
 3. Test out your script with various responses. Does it do what you expect it to?
-```
-```
+- **Answer:** I tested out my script with response = '1', response = '2', response = 'NaN', response = '' and it does what I expect it to do.
 
 ## For loop exercises
 Remember the exercise where you printed each letter of your name? 
