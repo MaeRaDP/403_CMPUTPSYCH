@@ -43,9 +43,11 @@ numarr = np.array([1,2,3])
 numarr * 2
 ```
 Question: What is the difference between multiplying lists and multiplying arrays?
-- **Answer:**
-When you multiply lists
-When you multiply arrays
+- **Answer:** 
+
+- When you multiply a list, the list is repeated according to the number you've given for it to be multiplied by. (E.g., list [1,2,3] multiplied by 2 is [1,2,3,1,2,3], the list doubled in length and is repeated twice).
+
+- When you multiply a numpy array, each integer in the array is multiplied according to the number you've given, but the length of the array stays the same. (E.g., [1,2,3] becomes [2,4,6] if it is multiplied by 2, but still contains 3 integers).
 
 Create a list of strings ['do','re','mi','fa'] called "strlist". Use operations to create the following outputs with your variable:
 ['dodo','rere','mimi','fafa']
@@ -53,7 +55,28 @@ Create a list of strings ['do','re','mi','fa'] called "strlist". Use operations 
 ['do','do','re','re','mi','mi','fa','fa']
 [['do','do'],['re','re'],['mi','mi'],['fa','fa']]
 ```
+strlist = ['do', 're', 'mi', 'fa']
 
+# ['dodo','rere','mimi','fafa']
+print([strlist[0] + strlist[0], 
+       strlist[1] + strlist[1], 
+       strlist[2] + strlist[2], 
+       strlist[3] + strlist[3]])
+
+# ['do','re','mi','fa','do','re','mi','fa']
+print(strlist*2)
+
+# ['do','do','re','re','mi','mi','fa','fa']
+print([strlist[0], strlist[0], 
+       strlist[1], strlist[1], 
+       strlist[2], strlist[2], 
+       strlist[3], strlist[3]])
+
+# [['do','do'],['re','re'],['mi','mi'],['fa','fa']]
+print([[strlist[0]*2],
+      [strlist[1]*2],
+      [strlist[2]*2],
+      [strlist[3]*2]])
 ```
 
 ## **Zipping exercises:**
