@@ -106,6 +106,6 @@ while image_looping: # keep showing image loop
     response = random.randint(0,10) # simulate response by generating a number
     print("Response generated was %i for image shown" %response) # print to see if code correctly checks for response that is 1 or 2
     failsafe = failsafe + 1 # add 1 count after every while loop iteration
-    if response == 1 or response == 2 or failsafe == 5: # if generated response is 1 or 2 or 5 iterations without valid 1 or 2 response
+    if response == 1 or response == 2 or failsafe == 5: # if generated response is 1 or 2 or 5 loop iterations without valid 1 or 2 response
         image_looping = False # stop looping
 ```
