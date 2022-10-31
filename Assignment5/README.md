@@ -75,7 +75,8 @@ if not pics == ims_in_dir:
     raise Exception("The image lists do not match up!")
 
 #-create counterbalanced list of all conditions *
-
+catImgs = list(zip(cats, imgs))
+print(catImgs)
 
 #=====================
 #PREPARE DATA COLLECTION LISTS
