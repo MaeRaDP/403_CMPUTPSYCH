@@ -5,12 +5,16 @@
 #=====================
 #IMPORT MODULES
 #=====================
+
 #-import numpy and/or numpy functions *
 import numpy as np
+
 #-import psychopy functions
 from psychopy import core, gui, visual, event
+
 #-import file save functions
 import json
+
 #-(import other functions as necessary: os...)
 import os
 
@@ -36,67 +40,92 @@ if not os.path.isdir(image_dir):
 #=====================
 #COLLECT PARTICIPANT INFO
 #=====================
+
 #-create a dialogue box that will collect current participant number, age, gender, handedness
+
 #get date and time
+
 #-create a unique filename for the data
 
 #=====================
 #STIMULUS AND TRIAL SETTINGS
 #=====================
+
 #-number of trials and blocks *
 nTrials = 10
 nBlocks = 2
+
 #-stimulus names (and stimulus extensions, if images) *
+
 #-stimulus properties like size, orientation, location, duration *
 stimSize = 
 stimOrient = 
 stimLoc=
 stimDur= 1
+
 #-start message text *
 startMsg = "Hello! Welcome to the experiment! Please press any button to begin."
 
 #=====================
 #PREPARE CONDITION LISTS
 #=====================
+
 #-check if files to be used during the experiment (e.g., images) exist
+
 #-create counterbalanced list of all conditions *
 
 #=====================
 #PREPARE DATA COLLECTION LISTS
 #=====================
+
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") *
 correctResp = []
+
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") *
 participantResp = []
+
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") *
 respAccuracy = []
+
 #-create an empty list for response time collection *
 RT = []
+
 #-create an empty list for recording the order of stimulus identities *
 stimId_order = []
+
 #-create an empty list for recording the order of stimulus properties *
 stimProp_order = []
 
 #=====================
 #CREATION OF WINDOW AND STIMULI
 #=====================
+
 #-define the monitor settings using psychopy functions
+
 #-define the window (size, color, units, fullscreen mode) using psychopy functions
+
 #-define experiment start text unsing psychopy functions
+
 #-define block (start)/end text using psychopy functions
+
 #-define stimuli using psychopy functions
+
 #-create response time clock
+
 #-make mouse pointer invisible
 
 #=====================
 #START EXPERIMENT
 #=====================
+
 #-present start message text
+
 #-allow participant to begin experiment with button press
 
 #=====================
 #BLOCK SEQUENCE
 #=====================
+
 #-for loop for nBlocks *
 for block in range(nBlocks):
     #-present block start message
@@ -106,6 +135,7 @@ for block in range(nBlocks):
     #=====================
     #TRIAL SEQUENCE
     #=====================    
+    
     #-for loop for nTrials *
     for trial in range(nTrials):
         #-set stimuli and stimulus properties for the current trial
@@ -114,6 +144,7 @@ for block in range(nBlocks):
         #=====================
         #START TRIAL
         #=====================   
+        
         #-draw stimulus
         #-flip window
         #-wait time (stimulus duration)
@@ -127,6 +158,7 @@ for block in range(nBlocks):
 #======================
 # END OF EXPERIMENT
 #======================        
+
 #-write data to a file
 #-close window
 #-quit experiment
