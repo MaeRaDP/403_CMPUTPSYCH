@@ -71,6 +71,8 @@ startMsg = "Hello! Welcome to the experiment! Please press any button to begin."
 #=====================
 
 #-check if files to be used during the experiment (e.g., images) exist
+if not pics == ims_in_dir:
+    raise Exception("The image lists do not match up!")
 
 #-create counterbalanced list of all conditions *
 
