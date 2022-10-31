@@ -168,7 +168,21 @@ for block in range(nBlocks):
 
 ## Import Exercises
 ```
+#=====================
+#IMPORT MODULES
+#=====================
 
+#-import numpy and/or numpy functions *
+import numpy as np
+
+#-import psychopy functions
+from psychopy import core, gui, visual, event
+
+#-import file save functions
+import json
+
+#-(import other functions as necessary: os...)
+import os
 ```
 ## Directory Exercises
 ```
