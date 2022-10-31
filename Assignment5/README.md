@@ -76,6 +76,7 @@ nBlocks = 2
 #BLOCK SEQUENCE
 #=====================
 #-for loop for nBlocks *
+for block in range(nBlocks):
     #-present block start message
     #-randomize order of trials here *
     #-reset response time clock here
@@ -84,6 +85,7 @@ nBlocks = 2
     #TRIAL SEQUENCE
     #=====================    
     #-for loop for nTrials *
+    for trial in range(nTrials):
         #-set stimuli and stimulus properties for the current trial
         #-empty keypresses
         
