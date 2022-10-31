@@ -58,13 +58,13 @@ nBlocks = 2
 #-stimulus names (and stimulus extensions, if images) *
 
 #-stimulus properties like size, orientation, location, duration *
-stimSize = 
+stimSize = (200,200)
 stimOrient = 
-stimLoc=
-stimDur= 1
+stimLoc = (0,0)
+stimDur = 1
 
 #-start message text *
-startMsg = "Hello! Welcome to the experiment! Please press any button to begin."
+startMsg = "Hello, Welcome to the experiment! You can begin by pressing any button."
 
 #=====================
 #PREPARE CONDITION LISTS
