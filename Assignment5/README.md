@@ -49,11 +49,17 @@ nBlocks = 2
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") *
+correctResp = []
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") *
+participantResp = []
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") *
+respAccuracy = []
 #-create an empty list for response time collection *
+RT = []
 #-create an empty list for recording the order of stimulus identities *
+stimId_order = []
 #-create an empty list for recording the order of stimulus properties *
+stimProp_order = []
 
 #=====================
 #CREATION OF WINDOW AND STIMULI
