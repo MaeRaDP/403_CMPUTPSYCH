@@ -76,6 +76,7 @@ if not pics == ims_in_dir:
 
 #-create counterbalanced list of all conditions *
 
+
 #=====================
 #PREPARE DATA COLLECTION LISTS
 #=====================
@@ -132,6 +133,7 @@ stimProp_order = []
 for block in range(nBlocks):
     #-present block start message
     #-randomize order of trials here *
+    np.random.shuffle(stims)
     #-reset response time clock here
     
     #=====================
