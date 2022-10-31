@@ -133,7 +133,7 @@ stimProp_order = []
 for block in range(nBlocks):
     #-present block start message
     #-randomize order of trials here *
-    np.random.shuffle(stims)
+    np.random.shuffle(Alltrials)
     #-reset response time clock here
     
     #=====================
