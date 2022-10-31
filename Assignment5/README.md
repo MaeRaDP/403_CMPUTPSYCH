@@ -37,6 +37,10 @@ nTrials = 10
 nBlocks = 2
 #-stimulus names (and stimulus extensions, if images) *
 #-stimulus properties like size, orientation, location, duration *
+stimSize = 
+stimOrient = 
+stimLoc=
+stimDur= 1
 #-start message text *
 startMsg = "Hello! Welcome to the experiment! Please press any button to begin."
 
