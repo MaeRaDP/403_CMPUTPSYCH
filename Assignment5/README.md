@@ -131,9 +131,10 @@ stimProp_order = []
 
 #-for loop for nBlocks *
 for block in range(nBlocks):
+    print('Welcome to block' + str(block + 1))
     #-present block start message
     #-randomize order of trials here *
-    np.random.shuffle(Alltrials)
+    np.random.shuffle(catImgs)
     #-reset response time clock here
     
     #=====================
@@ -142,6 +143,7 @@ for block in range(nBlocks):
     
     #-for loop for nTrials *
     for trial in range(nTrials):
+        print('Trial' + str(trial + 1))
         #-set stimuli and stimulus properties for the current trial
         #-empty keypresses
         
