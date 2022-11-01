@@ -58,9 +58,9 @@ nBlocks = 2
 #-stimulus names (and stimulus extensions, if images) *
 
 #-stimulus properties like size, orientation, location, duration *
-stimSize = (200,200)
-stimOrient = 
-stimLoc = (0,0)
+stimSize = [200,200]
+stimOrient = [10]
+stimLoc = [0,0]
 stimDur = 1
 
 #-start message text *
