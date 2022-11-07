@@ -56,7 +56,9 @@ nTrials = 10
 nBlocks = 2
 
 #-stimulus names (and stimulus extensions, if images) *
-
+cats = ['cat']*10
+imgs = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg']
+        
 #-stimulus properties like size, orientation, location, duration *
 stimSize = [200,200];
 stimOrient = 10;
@@ -64,7 +66,7 @@ stimLoc = [0,0];
 stimDur = 1
 
 #-start message text *
-startMsg = "Hello, Welcome to the experiment! You can begin by pressing any button."
+startMessage = "Welcome to the experiment, press any key to begin"
 
 #=====================
 #PREPARE CONDITION LISTS
