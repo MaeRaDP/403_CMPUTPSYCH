@@ -73,8 +73,18 @@ startMessage = "Welcome to the experiment, press any key to begin"
 #=====================
 
 #-check if files to be used during the experiment (e.g., images) exist
-if not pics == ims_in_dir:
-    raise Exception("The image lists do not match up!")
+imageCounter = 1
+pics = []
+while imageCounter < 11:
+    pics.append('cat' + str(imageCounter) + '.jpg')
+    imageCounter = imageCounter + 1
+print(pics)
+
+ims_in_dir = sorted(os.listdir(image_dir))
+for pic in pics:
+    if pic in ims_in_dir:
+        print(pic + " was found!")
+    else: raise Exception("The image does not exist!")
 
 #-create counterbalanced list of all conditions *
 catImgs = list(zip(cats, imgs))
@@ -203,8 +213,9 @@ print(pics)
 ```
 2. Automate the task of finding out whether each image (as listed in "pics") exists in the "images" directory. Use a for loop and if statements to print "cat1.jpg was found!", "cat2.jpg was found!"... etc. Raise an exception if an image does not exist.
 ```
+ims_in_dir = sorted(os.listdir(image_dir))
 for pic in pics:
-    if pic in image_dir:
+    if pic in ims_in_dir:
         print(pic + " was found!")
     else: raise Exception("The image does not exist!")
 ```
@@ -241,8 +252,9 @@ while imageCounter < 11:
     imageCounter = imageCounter + 1
 print(pics)
 
+ims_in_dir = sorted(os.listdir(image_dir))
 for pic in pics:
-    if pic in image_dir:
+    if pic in ims_in_dir:
         print(pic + " was found!")
     else: raise Exception("The image does not exist!")
 ```
