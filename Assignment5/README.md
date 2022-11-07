@@ -24,12 +24,15 @@ import os
 
 #-define the main directory where you will keep all of your experiment files
 main_dir = os.getcwd()
+print(main_dir)
 
 #-define the directory where you will save your data
 data_dir = os.path.join(main_dir,'data')
+print(data_dir)
 
 #-if you will be presenting images, define the image directory
 image_dir = os.path.join(main_dir,'images')
+print(image_dir)
 
 #-check that these directories exist
 if not os.path.isdir(data_dir):
@@ -56,12 +59,12 @@ nTrials = 10
 nBlocks = 2
 
 #-stimulus names (and stimulus extensions, if images) *
-cats = ['cat']*10
+cats = ['faces']*10
 imgs = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg']
         
 #-stimulus properties like size, orientation, location, duration *
 stimSize = [200,200];
-stimOrient = 10;
+stimOrient = [10];
 stimLoc = [0,0];
 stimDur = 1
 
