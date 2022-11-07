@@ -194,8 +194,12 @@ import os
 ## Directory Exercises
 1. Automate the creation of the list of images ("pics"). Do not write them all out manually.
 ```
+imageCounter = 1
 pics = []
-
+while imageCounter < 11:
+    pics.append('cat' + str(imageCounter) + '.jpg')
+    imageCounter = imageCounter + 1
+print(pics)
 ```
 2. Automate the task of finding out whether each image (as listed in "pics") exists in the "images" directory. Use a for loop and if statements to print "cat1.jpg was found!", "cat2.jpg was found!"... etc. Raise an exception if an image does not exist.
 ```
@@ -230,7 +234,12 @@ if not os.path.isdir(image_dir):
 #=====================
 
 #-check if files to be used during the experiment (e.g., images) exist
-
+imageCounter = 1
+pics = []
+while imageCounter < 11:
+    pics.append('cat' + str(imageCounter) + '.jpg')
+    imageCounter = imageCounter + 1
+print(pics)
 
 for pic in pics:
     if pic in image_dir:
