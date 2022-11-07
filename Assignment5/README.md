@@ -200,9 +200,9 @@ pics = []
 2. Automate the task of finding out whether each image (as listed in "pics") exists in the "images" directory. Use a for loop and if statements to print "cat1.jpg was found!", "cat2.jpg was found!"... etc. Raise an exception if an image does not exist.
 ```
 for pic in pics:
-    if pic == image_dir:
+    if pic in image_dir:
         print(pic + " was found!")
-    else: raise Exception("The image lists do not match up!")
+    else: raise Exception("The image does not exist!")
 ```
 3. Fill in the following sections of the experiment structure:
 ```
