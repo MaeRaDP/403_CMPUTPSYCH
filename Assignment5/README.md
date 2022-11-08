@@ -247,6 +247,7 @@ if not os.path.isdir(image_dir):
 #PREPARE CONDITION LISTS
 #=====================
 
+#-check if files to be used during the experiment (e.g., images) exist
 ims_in_dir = sorted(os.listdir(image_dir))
 for pic in pics:
     if pic in ims_in_dir:
