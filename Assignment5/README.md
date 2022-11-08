@@ -59,8 +59,15 @@ nTrials = 10
 nBlocks = 2
 
 #-stimulus names (and stimulus extensions, if images) *
-cats = ['faces']*10
-imgs = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg']
+faces = ['image_dir']*10 #from level 1 = first string of counterbalanced tuple = name of the image directory you want experiment to go to
+print(faces)
+
+imageCounter = 1
+pics = [] #from level 1 = second string of counterbalanced tuple = image name from inside directory to present
+while imageCounter < 11:
+    pics.append('face' + f"{imageCounter:02d}" + '.jpg')
+    imageCounter = imageCounter + 1
+print(pics)
         
 #-stimulus properties like size, orientation, location, duration *
 stimSize = [200,200];
@@ -76,13 +83,6 @@ startMessage = "Welcome to the experiment, press any key to begin"
 #=====================
 
 #-check if files to be used during the experiment (e.g., images) exist
-imageCounter = 1
-pics = []
-while imageCounter < 11:
-    pics.append('cat' + str(imageCounter) + '.jpg')
-    imageCounter = imageCounter + 1
-print(pics)
-
 ims_in_dir = sorted(os.listdir(image_dir))
 for pic in pics:
     if pic in ims_in_dir:
@@ -90,8 +90,8 @@ for pic in pics:
     else: raise Exception("The image does not exist!")
 
 #-create counterbalanced list of all conditions *
-catImgs = list(zip(cats, imgs))
-print(catImgs)
+faceStims = list(zip(faces, pics))
+print(faceStims)
 
 #=====================
 #PREPARE DATA COLLECTION LISTS
@@ -150,7 +150,7 @@ for block in range(nBlocks):
     print('Welcome to block' + str(block + 1))
     #-present block start message
     #-randomize order of trials here *
-    np.random.shuffle(catImgs)
+    np.random.shuffle(faceStims)
     #-reset response time clock here
     
     #=====================
@@ -210,7 +210,7 @@ import os
 imageCounter = 1
 pics = []
 while imageCounter < 11:
-    pics.append('cat' + str(imageCounter) + '.jpg')
+    pics.append('face' + f"{imageCounter:02d}" + '.jpg')
     imageCounter = imageCounter + 1
 print(pics)
 ```
@@ -251,7 +251,7 @@ if not os.path.isdir(image_dir):
 imageCounter = 1
 pics = []
 while imageCounter < 11:
-    pics.append('cat' + str(imageCounter) + '.jpg')
+    pics.append('face' + f"{imageCounter:02d}" + '.jpg')
     imageCounter = imageCounter + 1
 print(pics)
 
