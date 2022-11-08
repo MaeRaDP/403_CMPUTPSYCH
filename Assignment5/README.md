@@ -1,6 +1,6 @@
 # PSYCH 403 - Assignment 5 exercises: MPacificar
 
-## Experiment structure exercises + Import Exercises
+## Experiment structure exercises + (Compiled: Import + Directory Exercises)
 ```
 #=====================
 #IMPORT MODULES
