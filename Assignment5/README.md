@@ -59,11 +59,11 @@ nTrials = 10
 nBlocks = 2
 
 #-stimulus names (and stimulus extensions, if images) *
-faces = ['image_dir']*10 #from level 1 = first string of counterbalanced tuple = name of the image directory you want experiment to go to
+faces = ['image_dir']*10 #from level 1 zipping tutorial = first string of counterbalanced tuple = name of the image directory you want experiment to go to
 print(faces)
 
 imageCounter = 1
-pics = [] #from level 1 = second string of counterbalanced tuple = image name from inside directory to present
+pics = [] #from level 1 zipping tutorial = second string of counterbalanced tuple = image name from inside directory to present
 while imageCounter < 11:
     pics.append('face' + f"{imageCounter:02d}" + '.jpg')
     imageCounter = imageCounter + 1
