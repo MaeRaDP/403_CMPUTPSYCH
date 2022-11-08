@@ -247,14 +247,6 @@ if not os.path.isdir(image_dir):
 #PREPARE CONDITION LISTS
 #=====================
 
-#-check if files to be used during the experiment (e.g., images) exist
-imageCounter = 1
-pics = []
-while imageCounter < 11:
-    pics.append('face' + f"{imageCounter:02d}" + '.jpg')
-    imageCounter = imageCounter + 1
-print(pics)
-
 ims_in_dir = sorted(os.listdir(image_dir))
 for pic in pics:
     if pic in ims_in_dir:
