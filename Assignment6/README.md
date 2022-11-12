@@ -4,21 +4,84 @@
 Use the PsychoPy help page on guis to customize your "exp_info" dialog box: psychopy.gui
 1. Edit the dictionary "exp_info" so you have a variable called "session", with "1" preset as the session number.
 2. Edit the "gender" variable in "exp_info" so the subject can write in whatever they want into an empty box, instead of the drop-down list
-
+```
+# setup the dictionary for the gui
+exp_info = {    'subject_nr':0, 
+                'age':0, 
+                'handedness':('right','left','ambi'), 
+                'gender':'',
+                'session': 1}
+print(exp_info)
+```
 Using DlgFromDict:
 1. Customize my_dlg so that you have a title for your dialog box: "subject info".
 2. Set the variable "session" as fixed. What happens?
+
+- **Answer: The session variable cannot be edited (non-editable) by the participant if it's set to fixed**
+
 3. Set the order of the variables as session, subject_nr, age, gender, handedness.
 4. Once you have done all of the above, don't show "my_dlg" right away. Tell your experiment to print "All variables have been created! Now ready to show the dialog box!". Then, show the dialog box.
+```
+print("All variables have been created! Now ready to show the dialog box!") 
 
+my_dlg = gui.DlgFromDict(dictionary = exp_info,
+                        title = 'subject info',
+                        fixed = ['session'],
+                        order = ['session','subject_nr','age','gender','handedness'])
+```
 Fill in the following pseudocode with the real code you have learned so far:
 ```
 #=====================
 #COLLECT PARTICIPANT INFO
 #=====================
+from psychopy import gui, core, visual, monitors, event
+from datetime import datetime
+import os
+
 #-create a dialogue box that will collect current participant number, age, gender, handedness
-#get date and time
+# setup the dictionary for the gui:
+exp_info = {    'subject_nr':0, 
+                'age':0, 
+                'handedness':('right','left','ambi'), 
+                'gender':'',
+                'session': 1}
+print(exp_info)
+
+print("All variables have been created! Now ready to show the dialog box!")
+# participant info dialog box customization:
+my_dlg = gui.DlgFromDict(dictionary = exp_info,
+                        title = 'subject info',
+                        fixed = ['session'],
+                        order = ['session','subject_nr','age','gender','handedness'])
+
+# make sure subject data is entered correctly
+if exp_info['subject_nr'] == 0: #nothing entered
+    # error message dialog box:
+    err_dlg = gui.Dlg(title='error message') #give the dlg a title
+    err_dlg.addText('Enter a valid subject number!') #create an error message
+    err_dlg.show() #show the dlg
+    core.quit() #quit the experiment
+    
+# make sure subject can consent to taking part in the experiment
+if exp_info['age'] < 18:
+    # error message dialog box:
+    err_dlg = gui.Dlg(title='error message')
+    err_dlg.addText('%d year olds cannot give consent!' % (exp_info['age']))
+    err_dlg.show()
+    core.quit()
+    
+# get date and time
+date = datetime.now()
+print(date)
+exp_info['date'] = str(date.hour) + '-' + str(date.day) + '-' + str(date.month) + '-' + str(date.year)
+print(exp_info['date'])
+
 #-create a unique filename for the data
+filename =  str(exp_info['subject_nr']) + '_' + exp_info['date'] + '.csv'
+print(filename)
+
+main_dir = os.getcwd() 
+sub_dir = os.path.join(main_dir,'sub_info',filename)
 ```
 
 ## Monitor and window exercises
