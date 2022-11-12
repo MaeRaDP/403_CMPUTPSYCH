@@ -34,7 +34,7 @@ Fill in the following pseudocode with the real code you have learned so far:
 #=====================
 #COLLECT PARTICIPANT INFO
 #=====================
-from psychopy import gui, core, visual, monitors, event
+from psychopy import gui, core, 
 from datetime import datetime
 import os
 
@@ -88,15 +88,24 @@ sub_dir = os.path.join(main_dir,'sub_info',filename)
 
 Look at the psychopy help page on "window" to help solve the exercises:
 1. How does changing "units" affect how you define your window size?
-2. How does changing colorSpace affect how you define the color of your window? Can you define colors by name?
+- **Answer: **
+3. How does changing colorSpace affect how you define the color of your window? Can you define colors by name?
+- **Answer: **
 
 Fill in the following pseudocode with the real code you have learned so far:
 ```
 #=====================
 #CREATION OF WINDOW AND STIMULI
 #=====================
+from psychopy import visual, monitors
+
 #-define the monitor settings using psychopy functions
+mon = monitors.Monitor('myMonitor', width=38.3, distance=60) 
+mon.setSizePix([1920,1080])
+mon.save()
+
 #-define the window (size, color, units, fullscreen mode) using psychopy functions
+win = visual.Window(monitor=mon, size=(400,400), color=[-1,-1,-1], units='pix', fullscr=True)
 ```
 
 ## Stimulus exercises
