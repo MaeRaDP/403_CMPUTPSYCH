@@ -88,9 +88,9 @@ sub_dir = os.path.join(main_dir,'sub_info',filename)
 
 Look at the psychopy help page on "window" to help solve the exercises:
 1. How does changing "units" affect how you define your window size?
-- **Answer: **
+- **Answer:**
 3. How does changing colorSpace affect how you define the color of your window? Can you define colors by name?
-- **Answer: **
+- **Answer:**
 
 Fill in the following pseudocode with the real code you have learned so far:
 ```
