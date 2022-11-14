@@ -93,8 +93,36 @@ win = visual.Window(monitor=mon, size = [1920, 1080], color=["black"], units='pi
 ## Stimulus exercises
 Check the psychopy help page on "ImageStim" to help you solve these exercises:
 1. Write a short script that shows different face images from the image directory at 400x400 pixels in size. What does this do to the images? How can you keep the proper image dimensions and still change the size?
-2. Write a short script that makes one image appear at a time, each in a different quadrant of your screen (put the window in fullscreen mode). Think about how you can calculate window locations without using a trial-and-error method.
-3. Create a fixation cross stimulus (hint:text stimulus).
+- **Answer: specifying the size changes how big the stimulus (image) is showm on the screen. To keep proper image dimensions and still change size, specify the unit according to the image's dimension format (i.e., use units = 'pix' for images with dimensions specified in pixels).**
+```
+# stim exercise 1
+os.chdir('C:\Psycopy Images') #stuff you only have to define once at the top of your script
+main_dir = os.getcwd() #stuff you only have to define once at the top of your script
+image_dir = os.path.join(main_dir,'images') #stuff you only have to define once at the top of your script
+
+# number of trials
+nTrials = 10 
+
+# face images stimuli
+faceStims = ['face01.jpg', 'face02.jpg', 'face03.jpg', 'face04.jpg', 'face05.jpg', 'face06.jpg', 'face07.jpg', 'face08.jpg', 'face09.jpg', 'face10.jpg']
+
+# stimuli properties
+my_image = visual.ImageStim(win, units = 'pix', size = (400,400))
+
+# randomize to show different face images
+np.random.shuffle(faceStims)
+
+for trial in range(nTrials):
+    my_image.image = os.path.join(image_dir,faceStims[trial])
+    my_image.draw()
+    win.flip()
+    event.waitKeys()
+win.close()
+```
+3. Write a short script that makes one image appear at a time, each in a different quadrant of your screen (put the window in fullscreen mode). Think about how you can calculate window locations without using a trial-and-error method.
+```
+```
+4. Create a fixation cross stimulus (hint:text stimulus).
 
 Fill in the following pseudocode with the real code you have learned so far:
 ```
