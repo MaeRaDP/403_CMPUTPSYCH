@@ -69,16 +69,17 @@ sub_dir = os.path.join(main_dir,'sub_info',filename)
 
 Look at the psychopy help page on "window" to help solve the exercises:
 1. How does changing "units" affect how you define your window size?
-- **Answer:**
+- **Answer: Changing units does not affect how you define the window size, because it applies to the units of the stimuli being drawin in the window**
 3. How does changing colorSpace affect how you define the color of your window? Can you define colors by name?
-- **Answer:**
+- **Answer: PsychoPy uses three color spaces which are RGB, DKL, and LMS. Changing colorSpace changes how you define the colour of the window. RGB and DKL follows this format: [#,#,#], where # can range -1:1; HSV format is [#,#,#], where # can range 0:1. Colors can also be defined using hex values or by name as listed on the web/X11 color names (e.g., "pink").**
 
 Fill in the following pseudocode with the real code you have learned so far:
 ```
+from psychopy import visual, monitors
+
 #=====================
 #CREATION OF WINDOW AND STIMULI
 #=====================
-from psychopy import visual, monitors
 
 #-define the monitor settings using psychopy functions
 mon = monitors.Monitor('myMonitor', width=38.3, distance=60) 
@@ -86,7 +87,7 @@ mon.setSizePix([1920,1080])
 mon.save()
 
 #-define the window (size, color, units, fullscreen mode) using psychopy functions
-win = visual.Window(monitor=mon, size=(400,400), color=[-1,-1,-1], units='pix', fullscr=True)
+win = visual.Window(monitor=mon, size = [1920, 1080], color=["black"], units='pix', fullscr=True)
 ```
 
 ## Stimulus exercises
