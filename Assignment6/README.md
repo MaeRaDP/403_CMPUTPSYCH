@@ -100,6 +100,18 @@ from datetime import datetime
 import numpy as np
 import os
 
+#=====================
+#CREATION OF WINDOW AND STIMULI
+#=====================
+
+#-define the monitor settings using psychopy functions
+mon = monitors.Monitor('myMonitor', width=38.3, distance=60) 
+mon.setSizePix([1920,1080])
+mon.save()
+
+#-define the window (size, color, units, fullscreen mode) using psychopy functions
+win = visual.Window(monitor=mon, size = [1920, 1080], color=["black"], units='pix', fullscr=True)
+
 # stim exercise 1
 os.chdir('C:\Psycopy Images') #stuff you only have to define once at the top of your script
 main_dir = os.getcwd() #stuff you only have to define once at the top of your script
@@ -117,7 +129,6 @@ my_image = visual.ImageStim(win, units = 'pix', size = (400,400))
 # randomize to show different face images
 np.random.shuffle(faceStims)
 
-# show face images stimuli
 for trial in range(nTrials):
     my_image.image = os.path.join(image_dir,faceStims[trial])
     my_image.draw()
@@ -125,7 +136,7 @@ for trial in range(nTrials):
     event.waitKeys()
 win.close()
 ```
-3. Write a short script that makes one image appear at a time, each in a different quadrant of your screen (put the window in fullscreen mode). Think about how you can calculate window locations without using a trial-and-error method.
+2. Write a short script that makes one image appear at a time, each in a different quadrant of your screen (put the window in fullscreen mode). Think about how you can calculate window locations without using a trial-and-error method.
 ```
 from psychopy import gui, core, visual, monitors, event
 from datetime import datetime
@@ -185,7 +196,7 @@ for trial in range(nTrials):
     event.waitKeys()
 win.close()
 ```
-4. Create a fixation cross stimulus (hint:text stimulus).
+3. Create a fixation cross stimulus (hint:text stimulus).
 ```
 from psychopy import gui, core, visual, monitors, event
 from datetime import datetime
