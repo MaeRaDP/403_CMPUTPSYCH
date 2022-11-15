@@ -192,7 +192,7 @@ from datetime import datetime
 import numpy as np
 import os
 
-# stim exercise 2
+# stim exercise 3
 
 mon = monitors.Monitor('myMonitor', width=38.3, distance=60) 
 mon.setSizePix([1920,1080])
