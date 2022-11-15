@@ -1,5 +1,4 @@
-
-
+# PSYCH 403 - Assignment 7 exercises: MPacificar
 
 ## Wait exercises
 Fill in the following pseudocode with the real code you have learned so far using "core.wait" (and run it to make sure it works):
