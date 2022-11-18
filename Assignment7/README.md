@@ -119,6 +119,8 @@ for block in range(nBlocks):
     for trial in range(nTrials):
         print('Trial ' + str(trial + 1))
         #-set stimuli and stimulus properties for the current trial
+        my_image.image = os.path.join(image_dir,faceStims[trial])
+        my_image.pos = imageCoords[trial] # go through imageCoords list for image position
         
         #=====================
         #START TRIAL
@@ -133,11 +135,7 @@ for block in range(nBlocks):
         # reset timer before the image appears
         wait_timer.reset()
         #-draw image
-        my_image.image = os.path.join(image_dir,faceStims[trial])
-        my_image.pos = imageCoords[trial] # go through imageCoords list for image position
-        # show image:
         my_image.draw()
-        
         #-flip window
         win.flip()
         #-wait time (stimulus duration)
