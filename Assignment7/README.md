@@ -130,11 +130,11 @@ for block in range(nBlocks):
         #-wait time (stimulus duration)
         core.wait(.5) #-wait 0.5 seconds, then:
         
+        # reset timer before the image appears
+        wait_timer.reset()
         #-draw image
         my_image.image = os.path.join(image_dir,faceStims[trial])
         my_image.pos = imageCoords[trial] # go through imageCoords list for image position
-        # reset timer before the image appears
-        wait_timer.reset()
         # show image:
         my_image.draw()
         
