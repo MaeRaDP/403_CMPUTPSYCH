@@ -3,7 +3,31 @@
 ## Wait exercises
 Fill in the following pseudocode with the real code you have learned so far using "core.wait" (and run it to make sure it works):
 ```
-
+        #=====================
+        #START TRIAL
+        #===================== 
+        #-draw fixation
+        fix_text.draw()
+        #-flip window
+        win.flip()
+        #-wait time (stimulus duration)
+        core.wait(.5) #-wait 0.5 seconds, then:
+        
+        #-draw image
+        my_image.image = os.path.join(image_dir, faceStims[trial])
+        my_image.pos = imageCoords[trial]
+        my_image.draw()
+        #-flip window
+        win.flip()
+        #-wait time (stimulus duration)
+        core.wait(.5) #-wait 0.5 seconds, then:
+        
+        #-draw end trial text
+        end_trial_text.draw()
+        #-flip window
+        win.flip()
+        #-wait time (stimulus duration)
+        core.wait(.5) #-wait 0.5 seconds, then next trial
 ```
 
 ## Clock exercises
