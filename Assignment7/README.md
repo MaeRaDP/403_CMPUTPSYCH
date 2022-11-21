@@ -160,7 +160,7 @@ win.close()
 ```
 
 2. Create a "clock_wait_timer" to find out exactly how long each image is presented when you use a clock + while loops. How precise is this?
-- **Answer: the precision of clock + while loop is better than the previous one using core.wait. When I ran the code, the first block had 5 out of 10 trials with 1.000...seconds presentation, 1 trial with 1.00...seconds presentation, and 4 trials with 1.0...seconds presentation. The second block had 7 trials with 1.000...seconds presentation, and 3 trials with 1.0...seconds presentation. 
+- **Answer: the precision of clock + while loop is better than the previous one using core.wait. When I ran the code, the first block had 5 out of 10 trials with 1.000...seconds presentation, 1 trial with 1.00...seconds presentation, and 4 trials with 1.0...seconds presentation. The second block had 7 trials with 1.000...seconds presentation, and 3 trials with 1.0...seconds presentation.**
 
 ```
 from psychopy import gui, core, visual, monitors, event
@@ -289,7 +289,7 @@ win.close()
 ```
 
 3. Create a "countdown_timer" to find out exactly how long each image is presented when you use a CountdownTimer + while loops. How precise is this?
-- **Answer: the precision of the CountdownTimer function + while loop is also quite similar to the previous clock and while loop timer, but all trials in the first block did not exceed 0.50... seconds. However, 4 of the 10 trials in the second block were 0.51... seconds. The output for this version sends a warning after each trial about root:DEPRECATED Clock.add() deprecated in favor of .addTime()**
+- **Answer: the CountdownTimer function + while loop compared to the previous clock and while loop timer is not better in precision. However, compared to the core.wait, it is a bit better. When I did a test run: the first block had 6 trials with presentation of 1.00... seconds and 4 trials with 1.01... seconds; the second block had 8 trials with 1.00 seconds presentation and 2 with 1.01 seconds presentation. The output for this version sends a warning after each trial about root:DEPRECATED Clock.add() deprecated in favor of .addTime() - this may pose a problem when running the experiment with this timer**
 
 ```
 from psychopy import gui, core, visual, monitors, event
