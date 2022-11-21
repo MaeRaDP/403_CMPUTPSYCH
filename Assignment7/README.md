@@ -579,7 +579,9 @@ my_image = visual.ImageStim(win, units = 'pix', size = stimSize)
 
 #-make mouse pointer invisible
 
-#-timers
+#=====================
+#CLOCK TIMING
+#=====================
 # block timer
 block_timer = core.CountdownTimer()
 # trial timer
