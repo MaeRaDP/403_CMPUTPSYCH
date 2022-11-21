@@ -28,6 +28,8 @@ Fill in the following pseudocode with the real code you have learned so far usin
         core.wait(.5) #-wait 0.5 seconds, then next trial
 ```
 
+
+
 ## Clock exercises
 
 1. Create a "wait_timer" to find out exactly how long core.wait(2) presents each image. Make sure this is not counting the time of the whole trial, but only the duration of each image. How precise is core.wait?
@@ -580,7 +582,7 @@ my_image = visual.ImageStim(win, units = 'pix', size = stimSize)
 #-make mouse pointer invisible
 
 #=====================
-#CLOCK TIMING
+#CLOCK TIMING INFO
 #=====================
 # block timer
 block_timer = core.CountdownTimer()
