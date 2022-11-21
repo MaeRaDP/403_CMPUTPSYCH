@@ -31,7 +31,7 @@ Fill in the following pseudocode with the real code you have learned so far usin
 ## Clock exercises
 
 1. Create a "wait_timer" to find out exactly how long core.wait(2) presents each image. Make sure this is not counting the time of the whole trial, but only the duration of each image. How precise is core.wait?
-- **Answer: core.wait doesn't seem to be too precise because most images are presented longer than 0.5 seconds, some are presented at least 0.01 seconds longer which may be crucial for certain psychology experiments (e.g., When I did a test run, trial 9 in block 2 was presented for 0.5129216000004817 seconds).**
+- **Answer: core.wait seems to be a little bit precise, however all the trials in both blocks when I did a test run were over by 0.01 seconds which may be crucial for some experiments (e.g., trial 3 in block 1, the image presentation was 1.016... seconds).**
 ```
 from psychopy import gui, core, visual, monitors, event
 from datetime import datetime
@@ -39,7 +39,7 @@ import numpy as np
 import os
 
 # path settings:
-os.chdir('C:\Psycopy Images') #stuff you only have to define once at the top of your script
+os.chdir('C:\Psychopy Exercises') #stuff you only have to define once at the top of your script
 main_dir = os.getcwd() #stuff you only have to define once at the top of your script
 image_dir = os.path.join(main_dir,'images') #stuff you only have to define once at the top of your script
 
@@ -135,10 +135,11 @@ for block in range(nBlocks):
         wait_timer.reset()
         #-draw image
         my_image.draw()
+        fix_text.draw() #draw fixation with image
         #-flip window
         win.flip()
         #-wait time (stimulus duration)
-        core.wait(.5) #-wait 0.5 seconds, then:
+        core.wait(1) #-wait 1 second, then:
         # get duration of image presentation
         stimDur = wait_timer.getTime()
         
@@ -159,7 +160,7 @@ win.close()
 ```
 
 2. Create a "clock_wait_timer" to find out exactly how long each image is presented when you use a clock + while loops. How precise is this?
-- **Answer: the precision of clock + while loop is pretty similar to the previous one using core.wait. When I ran the code: 7 out of 10 image trials in the first block were shown 0.50... seconds, 2 of the image trials were shown 0.516... seconds and 1 image trial was shown 0.49... seconds**
+- **Answer: the precision of clock + while loop is better than the previous one using core.wait. When I ran the code, the first block had 5 out of 10 trials with 1.000...seconds presentation, 1 trial with 1.00...seconds presentation, and 4 trials with 1.0...seconds presentation. The second block had 7 trials with 1.000...seconds presentation, and 3 trials with 1.0...seconds presentation. 
 
 ```
 from psychopy import gui, core, visual, monitors, event
@@ -168,7 +169,7 @@ import numpy as np
 import os
 
 # path settings:
-os.chdir('C:\Psycopy Images') #stuff you only have to define once at the top of your script
+os.chdir('C:\Psychopy Exercises') #stuff you only have to define once at the top of your script
 main_dir = os.getcwd() #stuff you only have to define once at the top of your script
 image_dir = os.path.join(main_dir,'images') #stuff you only have to define once at the top of your script
 
@@ -263,9 +264,9 @@ for block in range(nBlocks):
         # reset image presentation timer before the image appears
         clock_wait_timer.reset()
         #-draw image using while loop
-        while clock_wait_timer.getTime() <=.5: #0.5 seconds
+        while clock_wait_timer.getTime() <= 1: #1 second
             my_image.draw() #-draw image
-            fix_text.draw() #-draw fixation cross simultaneously
+            fix_text.draw() #draw fixation with image
             #-flip window
             win.flip()
             # get duration of image presentation
@@ -297,7 +298,7 @@ import numpy as np
 import os
 
 # path settings:
-os.chdir('C:\Psycopy Images') #stuff you only have to define once at the top of your script
+os.chdir('C:\Psychopy Exercises') #stuff you only have to define once at the top of your script
 main_dir = os.getcwd() #stuff you only have to define once at the top of your script
 image_dir = os.path.join(main_dir,'images') #stuff you only have to define once at the top of your script
 
@@ -393,12 +394,12 @@ for block in range(nBlocks):
         
         # reset image presentation timer before the image appears
         countdown_timer.reset()
-        countdown_timer.add(.5) #add w second = trial is .5 second
+        countdown_timer.add(1) #add w second = trial is .5 second
         imgStartTime = stimTimer.getTime() # get start time of img presentation
         #-draw image using while loop and CountdownTimer function
         while countdown_timer.getTime() > 0: #1 second
             my_image.draw() #-draw image
-            fix_text.draw() #-draw fixation cross simultaneously
+            fix_text.draw() #draw fixation with image
             win.flip() #-flip window
             imgEndTime = stimTimer.getTime() # get end time of img presentation
         # compute duration of image presentation
