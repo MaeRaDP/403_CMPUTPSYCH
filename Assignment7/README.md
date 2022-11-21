@@ -689,6 +689,8 @@ win.close()
 #-quit experiment
 ```
 
+
+
 ## Frame-based timing exercises
 1. Adjust your experiment so that it follows frame-based timing rather than clock timing (comment out the clock-based timing code in case you want to use it again) using for loops and if statements.
 ```
@@ -849,7 +851,7 @@ my_image = visual.ImageStim(win, units = 'pix', size = stimSize)
 #-make mouse pointer invisible
 
 #=====================
-#CLOCK TIMING
+#CLOCK TIMING INFO
 #=====================
 # block timer
 #block_timer = core.CountdownTimer()
@@ -1146,7 +1148,7 @@ my_image = visual.ImageStim(win, units = 'pix', size = stimSize)
 #-make mouse pointer invisible
 
 #=====================
-#CLOCK TIMING
+#CLOCK TIMING INFO
 #=====================
 # block timer
 #block_timer = core.CountdownTimer()
