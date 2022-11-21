@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # path settings:
-os.chdir('C:\Psycopy Images') #stuff you only have to define once at the top of your script
+os.chdir('C:\Psychopy Exercises') #stuff you only have to define once at the top of your script
 main_dir = os.getcwd() #stuff you only have to define once at the top of your script
 image_dir = os.path.join(main_dir,'images') #stuff you only have to define once at the top of your script
 
