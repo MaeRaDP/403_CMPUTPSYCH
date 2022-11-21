@@ -601,7 +601,6 @@ image_timer = core.CountdownTimer()
 # timer to get duration of all presentation time
 metaTimer = core.Clock() 
 
-
 #-for loop for nBlocks
 for block in range(nBlocks):
     print('Welcome to block ' + str(block + 1))
