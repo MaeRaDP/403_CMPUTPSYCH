@@ -340,10 +340,10 @@ xCoord = []
 yCoord = []
 # get all possible horizontal positions in each quadrant per screen width
 for i in horizMult:
-    xCoord.append(i*(screenSize[0]/4)) 
+    xCoord.append(i*(screenWidth/4)) 
 # get all possible vertical positions in each quadrant per screen height
 for i in vertMult:
-    yCoord.append(i*(screenSize[1]/4))
+    yCoord.append(i*(screenHeight/4))
 # make a list of all X,Y coordinates for image presentation
 imageCoords = list(zip(xCoord, yCoord))
 # countdown timer for stimuli presentation + using while loops
@@ -394,7 +394,7 @@ for block in range(nBlocks):
         
         # reset image presentation timer before the image appears
         countdown_timer.reset()
-        countdown_timer.add(1) #add w second = trial is .5 second
+        countdown_timer.add(1) #add 1 second = trial is 1 second
         imgStartTime = stimTimer.getTime() # get start time of img presentation
         #-draw image using while loop and CountdownTimer function
         while countdown_timer.getTime() > 0: #1 second
@@ -421,6 +421,7 @@ for block in range(nBlocks):
 win.close()
 ```
 4. Edit your main experiment script so that the trials loop according to a clock timer. Also create and implement a block_timer and a trial_timer.
+- **Edited main experiment with CountdownTimer as clock timer to follow instruction per last instruction from Frame-based timing exercises.** 
 ```
 #=====================
 #IMPORT MODULES
