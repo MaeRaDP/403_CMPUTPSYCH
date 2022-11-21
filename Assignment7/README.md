@@ -291,7 +291,7 @@ win.close()
 ```
 
 3. Create a "countdown_timer" to find out exactly how long each image is presented when you use a CountdownTimer + while loops. How precise is this?
-- **Answer: the CountdownTimer function + while loop compared to the previous clock and while loop timer is not better in precision. However, compared to the core.wait, it is a bit better. When I did a test run: the first block had 6 trials with presentation of 1.00... seconds and 4 trials with 1.01... seconds; the second block had 8 trials with 1.00 seconds presentation and 2 with 1.01 seconds presentation. The output for this version sends a warning after each trial about root:DEPRECATED Clock.add() deprecated in favor of .addTime() - this may pose a problem when running the experiment with this timer**
+- **Answer: the CountdownTimer function + while loop compared to the previous clock and while loop timer are pretty similar in terms of precision. However, compared to the core.wait, it is a bit better. When I did a test run: the first block had 6 trials with presentation of 1.00... seconds and 4 trials with 1.01... seconds; the second block had 8 trials with 1.00 seconds presentation and 2 with 1.01 seconds presentation. The output for this version sends a warning after each trial about root:DEPRECATED Clock.add() deprecated in favor of .addTime() - I'm not sure if this may be a problem when running the experiment with this timer**
 
 ```
 from psychopy import gui, core, visual, monitors, event
