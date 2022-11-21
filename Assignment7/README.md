@@ -579,6 +579,16 @@ my_image = visual.ImageStim(win, units = 'pix', size = stimSize)
 
 #-make mouse pointer invisible
 
+#-timers
+# block timer
+block_timer = core.CountdownTimer()
+# trial timer
+trial_timer = core.CountdownTimer()
+# timer for image presentation + using while loops
+image_timer = core.CountdownTimer()
+# timer to get duration of all presentation time
+metaTimer = core.Clock() 
+
 #=====================
 #START EXPERIMENT
 #=====================
@@ -592,15 +602,6 @@ event.waitKeys()
 #=====================
 #BLOCK SEQUENCE
 #=====================
-# block timer
-block_timer = core.CountdownTimer()
-# trial timer
-trial_timer = core.CountdownTimer()
-# timer for image presentation + using while loops
-image_timer = core.CountdownTimer()
-# timer to get duration of all presentation time
-metaTimer = core.Clock() 
-
 #-for loop for nBlocks
 for block in range(nBlocks):
     print('Welcome to block ' + str(block + 1))
