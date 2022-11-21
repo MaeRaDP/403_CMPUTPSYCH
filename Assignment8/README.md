@@ -1,4 +1,4 @@
-# PSYCH 403 - Assignment 7 exercises: MPacificar
+# PSYCH 403 - Assignment 8 exercises: MPacificar
 
 ## PsychoPy keypress exercises
 1. event.getKeys is prone to collect as many responses as you can make in a trial, but often times you only want to collect one response for a trial. 
