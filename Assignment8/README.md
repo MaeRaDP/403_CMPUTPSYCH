@@ -916,30 +916,6 @@ win.close()
 core.quit()
 ```
 
-
-## Psychtoolbox keypress exercises
-1. Notice how "for key in keys:" in the kb examples of level6 are not indented within the stimulus presentation while loop. 
-What happens if you indent this line? How is this different from event.getKeys?
-```
-
-```
-
-
-2. Try out the kb keypress functions using core.wait instead of a CountdownTimer. 
-What happens?
-```
-
-```
-
-
-3. Use your favorite search engine to interpret epoch time from key.tDown. 
-Add a bit of code using datetime or ctime modules to print epoch time into a readable format.
-```
-
-```
-
-
-
 ## Recording data exercises
 1. Instead of collecting key name, subject RT, subject accuracy, and correct responses in lists, create a dictionary containing those variables. 
 Then, during response collection, append the data to the dictionary instead of filling lists.
