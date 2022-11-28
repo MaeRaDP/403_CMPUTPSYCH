@@ -114,31 +114,27 @@ for pic in pics:
 faceStims = pics
 print(faceStims)
 
-
 #=====================
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") 
 #correctResp = []
-correctResp = [[-1]*nTrials]*nBlocks
+correctResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") 
 #participantResp = []
-subjResp = [[-1]*nTrials]*nBlocks
+subjResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") 
 #respAccuracy = []
-respAccuracy = [[-1]*nTrials]*nBlocks
+respAccuracy = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response time collection 
 #RT = []
-respTime = [[-1]*nTrials]*nBlocks
+respTime = [[0]*nTrials]*nBlocks
 
 #-create an empty list for recording the order of stimulus identities 
-stimId_order = []
-
-#-create an empty list for recording the order of stimulus properties 
-stimProp_order = []
+stimId = [[0]*nTrials]*nBlocks
 
 #-empty list for block
 blocks = [[0, 0, 0, 0], [1, 1, 1, 1]]
@@ -166,6 +162,10 @@ block_msg = "Press any key to continue to the next block."
 end_trial_msg = "End of trial"
 block_text = visual.TextStim(win, text = block_msg)
 end_trial_text = visual.TextStim(win, text = end_trial_msg)
+
+#-instruction text using psychopy functions (Press A if image on left and L if image on right)
+instruction_msg = "You will be presented with different images on the screen. Press A if the image is presented on the left side of the screen or L if the image is presented on the right side of the screen. Please press any key to begin."
+instruction_text = visual.TextStim(win, text = instruction_msg)
 
 #-define stimuli using psychopy functions
 fix_text = visual.TextStim(win, text = "+")
@@ -220,8 +220,15 @@ for block in range(nBlocks):
     block_text.draw()
     win.flip()
     event.waitKeys() # wait for participant to press a key to start block
+    
+    #-present instruction message
+    instruction_text.draw()
+    win.flip()
+    event.waitKeys() # wait for participant to press a key
+    
     #-randomize order of trials here
     np.random.shuffle(faceStims)
+    print(faceStims)
     
     #=====================
     #TRIAL SEQUENCE
@@ -239,8 +246,6 @@ for block in range(nBlocks):
         #-set stimuli and stimulus properties for the current trial
         my_image.image = os.path.join(image_dir,faceStims[trial])
         my_image.pos = imageCoords[trial] # go through imageCoords list for image position
-        
-        #-empty keypresses
         
         #=====================
         #START TRIAL
@@ -263,7 +268,7 @@ for block in range(nBlocks):
                 my_image.draw() #-draw imagec
                 fix_text.draw() #draw fixation with image
                 win.flip() #-flip window
-                keys = event.getKeys() # collect keypresses after flip of image
+                keys = event.getKeys(keyList = ['a', 'l', 'escape']) # collect keypresses after flip of image
                 if keys:
                     count = count + 1 # count number of times a key is pressed
                     if 'escape' in keys: # if someone wants to escape the experiment
@@ -274,7 +279,7 @@ for block in range(nBlocks):
                         print(subjResp, respTime)
                 if frameN == (fix_frames + image_frames): #last frame for the image
                     print("End image frame =", frameN) #print frame number 
-
+                    
             # end trial
             if (fix_frames + image_frames) < frameN < total_frames: 
                 #-draw end trial text
@@ -292,9 +297,6 @@ for block in range(nBlocks):
         
         #-collect accuracy for that trial
         
-        #trialEndTime = metaTimer.getTime()
-        #trialDur = trialEndTime - trialStartTime
-        #print("The duration of the trial is {} seconds".format(trialDur))
         print('Overall, %i frames were dropped.' %win.nDroppedFrames) # print total number of dropped frames every trial
     
 #======================
@@ -306,7 +308,6 @@ win.close()
 #-quit experiment
 core.quit()
 ```
-
 
 2. Statement placement in your script is very important when collecting responses and refreshing keypresses. 
 What happens if you put event.ClearEvents within the trial loop instead of outside the trial loop? 
@@ -419,31 +420,27 @@ for pic in pics:
 faceStims = pics
 print(faceStims)
 
-
 #=====================
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") 
 #correctResp = []
-correctResp = [[-1]*nTrials]*nBlocks
+correctResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") 
 #participantResp = []
-subjResp = [[-1]*nTrials]*nBlocks
+subjResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") 
 #respAccuracy = []
-respAccuracy = [[-1]*nTrials]*nBlocks
+respAccuracy = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response time collection 
 #RT = []
-respTime = [[-1]*nTrials]*nBlocks
+respTime = [[0]*nTrials]*nBlocks
 
 #-create an empty list for recording the order of stimulus identities 
-stimId_order = []
-
-#-create an empty list for recording the order of stimulus properties 
-stimProp_order = []
+stimId = [[0]*nTrials]*nBlocks
 
 #-empty list for block
 blocks = [[0, 0, 0, 0], [1, 1, 1, 1]]
@@ -471,6 +468,10 @@ block_msg = "Press any key to continue to the next block."
 end_trial_msg = "End of trial"
 block_text = visual.TextStim(win, text = block_msg)
 end_trial_text = visual.TextStim(win, text = end_trial_msg)
+
+#-instruction text using psychopy functions (Press A if image on left and L if image on right)
+instruction_msg = "You will be presented with different images on the screen. Press A if the image is presented on the left side of the screen or L if the image is presented on the right side of the screen. Please press any key to begin."
+instruction_text = visual.TextStim(win, text = instruction_msg)
 
 #-define stimuli using psychopy functions
 fix_text = visual.TextStim(win, text = "+")
@@ -525,11 +526,18 @@ for block in range(nBlocks):
     block_text.draw()
     win.flip()
     event.waitKeys() # wait for participant to press a key to start block
+    
+    #-present instruction message
+    instruction_text.draw()
+    win.flip()
+    event.waitKeys() # wait for participant to press a key
+    
     #-randomize order of trials here
     np.random.shuffle(faceStims)
     
     # clear events outside of trial instead of inside trial
     event.clearEvents(eventType='keyboard')
+    
     #=====================
     #TRIAL SEQUENCE
     #=====================    
@@ -546,8 +554,6 @@ for block in range(nBlocks):
         #-set stimuli and stimulus properties for the current trial
         my_image.image = os.path.join(image_dir,faceStims[trial])
         my_image.pos = imageCoords[trial] # go through imageCoords list for image position
-        
-        #-empty keypresses
         
         #=====================
         #START TRIAL
@@ -570,7 +576,7 @@ for block in range(nBlocks):
                 my_image.draw() #-draw imagec
                 fix_text.draw() #draw fixation with image
                 win.flip() #-flip window
-                keys = event.getKeys() # collect keypresses after flip of image
+                keys = event.getKeys(keyList = ['a', 'l', 'escape']) # collect keypresses after flip of image
                 if keys:
                     count = count + 1 # count number of times a key is pressed
                     if 'escape' in keys: # if someone wants to escape the experiment
@@ -599,9 +605,6 @@ for block in range(nBlocks):
         
         #-collect accuracy for that trial
         
-        #trialEndTime = metaTimer.getTime()
-        #trialDur = trialEndTime - trialStartTime
-        #print("The duration of the trial is {} seconds".format(trialDur))
         print('Overall, %i frames were dropped.' %win.nDroppedFrames) # print total number of dropped frames every trial
     
 #======================
@@ -724,31 +727,27 @@ for pic in pics:
 faceStims = pics
 print(faceStims)
 
-
 #=====================
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") 
 #correctResp = []
-correctResp = [[-1]*nTrials]*nBlocks
+correctResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") 
 #participantResp = []
-subjResp = [[-1]*nTrials]*nBlocks
+subjResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") 
 #respAccuracy = []
-respAccuracy = [[-1]*nTrials]*nBlocks
+respAccuracy = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response time collection 
 #RT = []
-respTime = [[-1]*nTrials]*nBlocks
+respTime = [[0]*nTrials]*nBlocks
 
 #-create an empty list for recording the order of stimulus identities 
-stimId_order = []
-
-#-create an empty list for recording the order of stimulus properties 
-stimProp_order = []
+stimId = [[0]*nTrials]*nBlocks
 
 #-empty list for block
 blocks = [[0, 0, 0, 0], [1, 1, 1, 1]]
@@ -776,6 +775,10 @@ block_msg = "Press any key to continue to the next block."
 end_trial_msg = "End of trial"
 block_text = visual.TextStim(win, text = block_msg)
 end_trial_text = visual.TextStim(win, text = end_trial_msg)
+
+#-instruction text using psychopy functions (Press A if image on left and L if image on right)
+instruction_msg = "You will be presented with different images on the screen. Press A if the image is presented on the left side of the screen or L if the image is presented on the right side of the screen. Please press any key to begin."
+instruction_text = visual.TextStim(win, text = instruction_msg)
 
 #-define stimuli using psychopy functions
 fix_text = visual.TextStim(win, text = "+")
@@ -830,6 +833,12 @@ for block in range(nBlocks):
     block_text.draw()
     win.flip()
     event.waitKeys() # wait for participant to press a key to start block
+
+    #-present instruction message
+    instruction_text.draw()
+    win.flip()
+    event.waitKeys() # wait for participant to press a key
+    
     #-randomize order of trials here
     np.random.shuffle(faceStims)
     
@@ -849,8 +858,6 @@ for block in range(nBlocks):
         #-set stimuli and stimulus properties for the current trial
         my_image.image = os.path.join(image_dir,faceStims[trial])
         my_image.pos = imageCoords[trial] # go through imageCoords list for image position
-        
-        #-empty keypresses
         
         #=====================
         #START TRIAL
@@ -873,7 +880,7 @@ for block in range(nBlocks):
                 my_image.draw() #-draw imagec
                 fix_text.draw() #draw fixation with image
                 win.flip() #-flip window
-                keys = event.getKeys() # collect keypresses after flip of image
+                keys = event.getKeys(keyList = ['a', 'l', 'escape']) # collect keypresses after flip of image
                 if frameN == (fix_frames + image_frames): #last frame for the image
                     print("End image frame =", frameN) #print frame number 
             if keys:
@@ -901,9 +908,6 @@ for block in range(nBlocks):
         
         #-collect accuracy for that trial
         
-        #trialEndTime = metaTimer.getTime()
-        #trialDur = trialEndTime - trialStartTime
-        #print("The duration of the trial is {} seconds".format(trialDur))
         print('Overall, %i frames were dropped.' %win.nDroppedFrames) # print total number of dropped frames every trial
     
 #======================
