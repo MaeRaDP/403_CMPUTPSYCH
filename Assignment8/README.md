@@ -909,12 +909,13 @@ core.quit()
 ```
 
 ## Recording data exercises
+**NOTE: I used the tutorial example for these exercises**
 1. Instead of collecting key name, subject RT, subject accuracy, and correct responses in lists, create a dictionary containing those variables. 
 Then, during response collection, append the data to the dictionary instead of filling lists.
 
--**NOTE: I used the tutorial example for these exercises**
 
--**For this one, I'm not sure if I'm doing the dictionary thing properly, I kept the lists and converted into dictionary**
+
+- **For this one, I'm not sure if I'm doing the dictionary thing properly, I kept the lists and converted into dictionary**
 
 ```
 # import modules/functions
