@@ -118,19 +118,15 @@ print(faceStims)
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") 
-#correctResp = []
 correctResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") 
-#participantResp = []
 subjResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") 
-#respAccuracy = []
 respAccuracy = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response time collection 
-#RT = []
 respTime = [[0]*nTrials]*nBlocks
 
 #-create an empty list for recording the order of stimulus identities 
@@ -424,19 +420,15 @@ print(faceStims)
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") 
-#correctResp = []
 correctResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") 
-#participantResp = []
 subjResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") 
-#respAccuracy = []
 respAccuracy = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response time collection 
-#RT = []
 respTime = [[0]*nTrials]*nBlocks
 
 #-create an empty list for recording the order of stimulus identities 
@@ -731,19 +723,15 @@ print(faceStims)
 #PREPARE DATA COLLECTION LISTS
 #=====================
 #-create an empty list for correct responses (e.g., "on this trial, a response of X is correct") 
-#correctResp = []
 correctResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for participant responses (e.g., "on this trial, response was a X") 
-#participantResp = []
 subjResp = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response accuracy collection (e.g., "was participant correct?") 
-#respAccuracy = []
 respAccuracy = [[0]*nTrials]*nBlocks
 
 #-create an empty list for response time collection 
-#RT = []
 respTime = [[0]*nTrials]*nBlocks
 
 #-create an empty list for recording the order of stimulus identities 
