@@ -1093,6 +1093,7 @@ win.close()
 ## Save csv exercises
 1. Using csv.DictWriter (use your favorite search engine to find the help page), save your dictionary (that you created above) as a .csv file.
 - **I edited the dictionary here how it would be written into the csv file following Dr. Mathewson's example, but it doesn't match the dictionary I created above.**
+- **For the version with the dictionary I created above, see [CSV_ExerciseV2.png](https://pages.github.com/) and the output csv file: [V2subject1_math_Nov282022](https://pages.github.com/)**
 ```
 # import modules/functions
 from psychopy import core, event, visual, monitors
