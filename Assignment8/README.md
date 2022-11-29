@@ -1199,6 +1199,8 @@ win.close()
 
 ## Save JSON exercises
 1. Add JSON filesaving to your experiment script.
+
+- **Have issues with this - for some reason, it doesn't save the first block's data properly, but 2nd data (block1) is fine**
 ```
 # import modules/functions
 from psychopy import core, event, visual, monitors
